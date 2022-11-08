@@ -54,13 +54,13 @@ document.querySelector("#skip").addEventListener("click", function(){
 
 document.querySelector('#mute').addEventListener('click', function(){
 	// console.log("The current volume is " + video.volume);
-	if (video.volume === 0){
-		video.volume = 1;
+	if (video.muted == true){
+		video.muted = false;
 		console.log("Unmute");
 		this.textContent = "Mute";
 	}
 	else{
-		video.volume = 0;
+		video.muted = true;
 		console.log("Mute");
 		this.textContent = "Unmute";
 	}
